@@ -1,9 +1,12 @@
 import './App.css';
 
 function App() {
+  const author = 'Nirajan Mahara';
+  const sum = 2000 + 21;
+
   return (
     <div className="App">
-      <h1>React Firebase TODO App 🚀</h1>
+      <h1>{author} React Firebase TODO App {sum} {5+2} 🚀</h1>
 
       <input />
       <button>Add Todo</button>
