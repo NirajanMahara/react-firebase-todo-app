@@ -10,6 +10,9 @@ function App() {
     // This will fire off when we click the button
     console.log('👽', 'I am working');
 
+    // Prevent default page refresh of the event
+    event.preventDefault();
+
     setTodos([...todos, input]);
   };
 
