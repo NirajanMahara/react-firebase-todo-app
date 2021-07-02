@@ -22,12 +22,15 @@ function App() {
 
   const addTodo = (event) => {
     // This will fire off when we click the button
-    console.log('👽', 'I am working');
+    // console.log('👽', 'I am working');
 
     // Prevent default page refresh of the event
     event.preventDefault();
 
-    setTodos([...todos, input]);
+    // Add todos todo in db.collection todo field from the input field
+    db.collection('todos').add({
+      todo: input,
+    });
 
     // Clear the `<input />` field after the `<submit />`
     setInput('');
