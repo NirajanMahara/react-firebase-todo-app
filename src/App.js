@@ -18,6 +18,9 @@ function App() {
 
     // Clear the `<input />` field after the `<submit />`
     setInput('');
+
+    // Console logging the todos array list empty string spam
+    console.log(todos);
   };
 
   return (
@@ -31,6 +34,7 @@ function App() {
         />
 
         <Button
+          disabled={!input}
           type="submit"
           onClick={addTodo}
           variant="contained"
@@ -38,7 +42,7 @@ function App() {
         >
           Add Todo
         </Button>
-        {/* <button type="submit" onClick={addTodo}> Add todo </button> */}
+        {/* <button disabled={!input} type="submit" onClick={addTodo}> Add todo </button> */}
       </form>
 
       <ul>
