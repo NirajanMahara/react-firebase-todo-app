@@ -14,6 +14,9 @@ function App() {
     event.preventDefault();
 
     setTodos([...todos, input]);
+
+    // Clear the `<input />` field after the `<submit />`
+    setInput('');
   };
 
   return (
