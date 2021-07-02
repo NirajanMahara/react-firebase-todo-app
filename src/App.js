@@ -6,12 +6,17 @@ function App() {
   const [input, setInput] = useState('');
   console.log('🔥', input);
 
+  const addTodo = (event) => {
+    // This will fire off when we click the button
+    console.log('👽', 'I am working');
+  };
+
   return (
     <div className="App">
       <h1> React Firebase TODO App 🚀</h1>
 
       <input value={input} onChange={(event) => setInput(event.target.value)} />
-      <button>Add Todo</button>
+      <button onClick={addTodo}>Add Todo</button>
 
       <ul>
         {todos.map((todo) => (
