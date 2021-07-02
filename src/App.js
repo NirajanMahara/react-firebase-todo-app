@@ -17,8 +17,15 @@ function App() {
     <div className="App">
       <h1> React Firebase TODO App 🚀</h1>
 
-      <input value={input} onChange={(event) => setInput(event.target.value)} />
-      <button onClick={addTodo}>Add Todo</button>
+      <form>
+        <input
+          value={input}
+          onChange={(event) => setInput(event.target.value)}
+        />
+        <button type="submit" onClick={addTodo}>
+          Add Todo
+        </button>
+      </form>
 
       <ul>
         {todos.map((todo) => (
