@@ -20,6 +20,7 @@ const useStyles = makeStyles((theme) => ({
 function Todo(props) {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
+  const [input, setInput] = useState();
 
   const handleOpen = () => {
     setOpen(true);
@@ -29,12 +30,27 @@ function Todo(props) {
   //   setOpen(false);
   // };
 
+  const updateTodo = () => {
+    // Update the todo with the new input text
+
+    db.collection('todos').doc(props.todo.id).set({
+        todo: input
+      }, { merge: true });
+
+    setOpen(false);
+  };
+
   return (
     <>
       <Modal open={open} onClose={(e) => setOpen(false)}>
         <div className={classes.paper}>
           <h1>I am a modal</h1>
-          <Button variant="contained" onClick={(e) => setOpen(false)}>
+          <input
+            placeholder={props.todo.todo}
+            value={input}
+            onChange={(event) => setInput(event.target.value)}
+          />
+          <Button variant="contained" onClick={updateTodo}>
             Update Todo
           </Button>
         </div>
