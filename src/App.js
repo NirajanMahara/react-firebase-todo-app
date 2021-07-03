@@ -19,7 +19,9 @@ function App() {
       .onSnapshot((snapshot) => {
         // console.log("I ran when the component loaded");
         // console.log(snapshot.docs.map((doc) => doc.data()));
-        setTodos(snapshot.docs.map((doc) => doc.data().todo));
+        setTodos(
+          snapshot.docs.map((doc) => ({ id: doc.id, todo: doc.data().todo }))
+        );
       });
   }, []);
 
@@ -71,7 +73,7 @@ function App() {
 
       <ul>
         {todos.map((todo) => (
-          <Todo text={todo} />
+          <Todo todo={todo} />
         ))}
       </ul>
     </div>
