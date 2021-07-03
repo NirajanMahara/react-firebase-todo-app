@@ -55,7 +55,7 @@ function Todo(props) {
           </Button>
         </div>
       </Modal>
-      <List>
+      <List className="List">
         <ListItem>
           <ListItemText
             primary={props.todo.todo}
