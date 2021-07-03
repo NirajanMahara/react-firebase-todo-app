@@ -1,3 +1,45 @@
+![screencapture-react-firebase-todo-app-2021-web-app-2021-07-03-17_40_31](https://user-images.githubusercontent.com/69881638/124353713-da587e80-dc27-11eb-9289-2947acc90003.png)
+![screencapture-react-firebase-todo-app-2021-web-app-2021-07-03-17_43_51 (2)](https://user-images.githubusercontent.com/69881638/124353748-0411a580-dc28-11eb-99fa-307ad93f8859.png)
+_______________________________________________________
+
+React Firebase TODO App 🚀
+
+Reference Article: https://www.linkedin.com/pulse/how-create-react-todo-app-firebase-begineers-nirajan-mahara
+_______________________________________________________
+
+* ⚛ Used REACTJS
+
+   - 🚀ES6(EcmaScript 6 (2015) is a standard of js)
+        
+   - 🚀React HOOKS 
+       
+   - 🚀import { useState, useEffect } from 'react';
+
+* 🔥 FIREBASE ( database && hosting )
+
+   - 📅 Real-time database 😥 => 😎
+         
+   - 🌎 Hosted Online 🚀
+
+* ✅ 4️⃣ CRUD functionality
+
+   - 🎁 Create Todos
+         
+   - 😎 Read Todos
+         
+   - 📝 Update Todos
+         
+   - 🚮 Delete Todos
+
+* ✨Material -UI for design (front-end)
+   - `npm i material-ui/core`
+    
+   - `npm i material-ui/icons`
+________________________________________________________
+                                                        credit: Nirajan Mahara
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
