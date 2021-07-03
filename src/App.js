@@ -4,6 +4,7 @@ import './App.css';
 import Todo from './Todo';
 import db from './firebase';
 import firebase from 'firebase';
+import Footer from './Footer.js';
 
 function App() {
   const [todos, setTodos] = useState([]);
@@ -76,6 +77,8 @@ function App() {
           <Todo todo={todo} />
         ))}
       </ul>
+
+      <Footer />
     </div>
   );
 }
