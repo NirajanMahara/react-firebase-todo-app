@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { List, ListItem, ListItemText, Modal } from '@material-ui/core';
+import { List, ListItem, ListItemText, Modal, Button } from '@material-ui/core';
 import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
+import Edit from '@material-ui/icons/Edit';
 import { makeStyles } from '@material-ui/core/styles';
 import './Todo.css';
 import db from './firebase';
@@ -33,7 +34,9 @@ function Todo(props) {
       <Modal open={open} onClose={(e) => setOpen(false)}>
         <div className={classes.paper}>
           <h1>I am a modal</h1>
-          <button onClick={(e) => setOpen(false)}></button>
+          <Button variant="contained" onClick={(e) => setOpen(false)}>
+            Update Todo
+          </Button>
         </div>
       </Modal>
       <List>
@@ -43,7 +46,7 @@ function Todo(props) {
             secondary="Dummy deadline ⏰"
           />
         </ListItem>
-        <button onClick={(e) => setOpen(true)}>Edit</button>
+        <Edit onClick={(e) => setOpen(true)}></Edit>
         <DeleteForeverIcon
           onClick={(event) =>
             db.collection('todos').doc(props.todo.id).delete()
